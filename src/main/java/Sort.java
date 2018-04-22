@@ -4,7 +4,8 @@ import java.util.List;
 
 public class Sort {
     //1为按学号排序，2为按照年龄排序，3为按照成绩排序
-    public static List<Student> sort(List<Student> studentList,int type){
+    public static List<Student> sort(List<Student> studentList,int type,int descend){
+
         if(type == 1){
             Collections.sort(studentList, new Comparator<Student>() {
                 public int compare(Student o1, Student o2) {
@@ -12,6 +13,8 @@ public class Sort {
                     return i;
                 }
             });
+            if(descend == 1)
+                Collections.reverse(studentList);
         }
         else if(type == 2){
             Collections.sort(studentList, new Comparator<Student>() {
@@ -23,6 +26,8 @@ public class Sort {
                     return i;
                 }
             });
+            if(descend == 1)
+                Collections.reverse(studentList);
         }
         else if(type == 3){
             Collections.sort(studentList, new Comparator<Student>() {
@@ -34,6 +39,8 @@ public class Sort {
                     return i;
                 }
             });
+            if(descend == 1)
+                Collections.reverse(studentList);
         }
         return studentList;
     }

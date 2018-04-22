@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,16 +6,18 @@ import java.util.List;
 public class CSVUtils {
 
     /**
-     *
+     *读入CSV文件并存在List中
      * @param file
      * @return
      */
     public static List<Student> importCsv(File file) {
         List<Student> studentList = new ArrayList<Student>();
-        BufferedReader br=null;
+        BufferedReader br = null;
+
         try {
             br = new BufferedReader(new FileReader(file));
             String line = "";
+            br.readLine();//读标题行
             while ((line = br.readLine()) != null) {
                 int id = Integer.parseInt(line.split(",")[0]);
                 String name = line.split(",")[1];
@@ -28,15 +27,6 @@ public class CSVUtils {
                 studentList.add(student);
             }
         }catch (Exception e) {
-        }finally{
-            if(br!=null){
-                try {
-                    br.close();
-                    br = null;
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
 
         return studentList;
@@ -50,6 +40,8 @@ public class CSVUtils {
      */
     public static boolean exportCsv(File file,List<Student> studentList){
         boolean success = false;
+       // BufferedWriter bw = new BufferedWriter(new FileWriter(csv,true));
+
 
         return success;
 
