@@ -1,7 +1,7 @@
 import output.FileOutput;
 import output.PrintOutput;
 import sort.CSVInput;
-import sort.Sort;
+import sort.StudentSort;
 import sort.Student;
 
 import java.io.File;
@@ -52,7 +52,7 @@ public class Main {
 
         else {
 
-            studentList = Sort.sort(studentList, type, descend);
+            studentList = new StudentSort().sort(studentList, type, descend);
         }
 
         //输出到控制台

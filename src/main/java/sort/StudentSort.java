@@ -4,9 +4,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Sort {
+public class StudentSort {
     //1为按学号排序，2为按照年龄排序，3为按照成绩排序
-    public static List<Student> sort(List<Student> studentList,int type,int descend){
+    public  List<Student> sort(List<Student> studentList,int type,int descend){
 
         if(type == 1){
             Collections.sort(studentList, new Comparator<Student>() {
