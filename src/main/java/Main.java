@@ -14,7 +14,7 @@ public class Main {
         int descend = sc.nextInt();
 
         //排序
-        List<Student> studentList = CSVUtils.importCsv(new File("F:/IDEAWorkSpace/quizsort/student1.csv"));
+        List<Student> studentList = CSVUtils.importCsv(new File("F:/IDEAWorkSpace/quizsort/student.csv"));
         studentList = Sort.sort(studentList,type,descend);
 
         //输出到控制台
@@ -25,7 +25,7 @@ public class Main {
         }
 
         //输出到文件
-
+        CSVUtils.exportCsv(new File("F:/IDEAWorkSpace/quizsort/sort.csv"),studentList);
     }
 
 }
