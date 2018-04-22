@@ -42,7 +42,7 @@ public class Main {
         }
 
         //排序
-        List<Student> studentList = CSVInput.importCsv(new File(projectFile+"\\"+ inputName));
+        List<Student> studentList = new CSVInput().importCsv(new File(projectFile+"\\"+ inputName));
         if(type !=1 && type != 2 && type != 3){
             System.out.println("您输入的排序类型不正确");
         }

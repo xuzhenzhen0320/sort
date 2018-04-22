@@ -12,7 +12,7 @@ public class CSVInput {
      * @param file
      * @return
      */
-    public static List<Student> importCsv(File file) {
+    public  List<Student> importCsv(File file) {
         List<Student> studentList = new ArrayList<Student>();
         BufferedReader br = null;
 
