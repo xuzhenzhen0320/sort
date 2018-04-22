@@ -9,7 +9,7 @@ import java.util.List;
 public class CSVUtils {
 
     /**
-     * ??CSV???????
+     *
      * @param file
      * @return
      */
@@ -43,8 +43,9 @@ public class CSVUtils {
     }
 
     /**
-     *??????CSV??
+     *
      * @param file
+     * @param studentList
      * @return
      */
     public static boolean exportCsv(File file,List<Student> studentList){
